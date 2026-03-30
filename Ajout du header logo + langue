@@ -1,0 +1,14 @@
+<header>
+  <div class="logo">
+    <div class="logo-mark">🌍</div>
+    <span class="logo-name">L'Assistant <span>Inclusion</span></span>
+  </div>
+  <div class="header-langs">
+    <span class="lang-chip">FR</span>
+    <span class="lang-chip">AR</span>
+    <span class="lang-chip">EN</span>
+    <span class="lang-chip">ES</span>
+    <span class="lang-chip">PT</span>
+    <span class="lang-chip">TR</span>
+  </div>
+</header>
