@@ -1,0 +1,24 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0D1B2A; --bg2: #132236; --bg3: #1A2E45;
+    --surface: #1F3650; --border: #2A4A68;
+    --accent: #F0A500; --accent2: #3EC9A7;
+    --text: #EDF2F7; --muted: #8BA5BF; --danger: #E05C5C;
+    --radius: 12px; --radius-lg: 20px;
+  }
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--bg); color: var(--text);
+    min-height: 100vh; display: flex; flex-direction: column;
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 80% 10%, rgba(240,165,0,.07) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 10% 80%, rgba(62,201,167,.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+</style>
