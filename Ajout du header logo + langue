@@ -1,14 +1,122 @@
-<header>
-  <div class="logo">
-    <div class="logo-mark">🌍</div>
-    <span class="logo-name">L'Assistant <span>Inclusion</span></span>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L'Assistant Inclusion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* === RESET & VARIABLES === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0D1B2A;
+      --bg2: #132236;
+      --bg3: #1A2E45;
+      --surface: #1F3650;
+      --border: #2A4A68;
+      --accent: #F0A500;
+      --accent2: #3EC9A7;
+      --text: #EDF2F7;
+      --muted: #8BA5BF;
+      --danger: #E05C5C;
+      --radius: 12px;
+      --radius-lg: 20px;
+    }
+ 
+    /* === BODY & FOND === */
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 80% 10%, rgba(240,165,0,.07) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 10% 80%, rgba(62,201,167,.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+ 
+    /* === HEADER === */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,27,42,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px; height: 68px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-mark {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), #e08c00);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; box-shadow: 0 4px 16px rgba(240,165,0,.3);
+    }
+    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--text); }
+    .logo-name span { color: var(--accent); }
+    .header-langs { display: flex; gap: 6px; }
+    .lang-chip { font-size: .72rem; font-weight: 600; padding: 3px 9px; border-radius: 20px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+ 
+    /* === HERO === */
+    .hero { position: relative; z-index: 1; text-align: center; padding: 52px 24px 36px; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: .78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 16px;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 28px; height: 1px; background: var(--accent); opacity: .5; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 14px; }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero p { max-width: 520px; margin: 0 auto 28px; font-size: 1.02rem; color: var(--muted); line-height: 1.7; font-weight: 300; }
+ 
+    /* === LAYOUT === */
+    .tabs-wrapper { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 0 20px 60px; width: 100%; }
+ 
+    /* === FOOTER === */
+    footer { position: relative; z-index: 1; text-align: center; padding: 24px; border-top: 1px solid var(--border); font-size: .78rem; color: var(--muted); }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+ 
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <div class="logo-mark">🌍</div>
+      <span class="logo-name">L'Assistant <span>Inclusion</span></span>
+    </div>
+    <div class="header-langs">
+      <span class="lang-chip">FR</span>
+      <span class="lang-chip">AR</span>
+      <span class="lang-chip">EN</span>
+      <span class="lang-chip">ES</span>
+      <span class="lang-chip">PT</span>
+      <span class="lang-chip">TR</span>
+    </div>
+  </header>
+ 
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">Intelligence Artificielle · Accès aux droits</div>
+    <h1>Comprendre vos documents<br><em>dans votre langue</em></h1>
+    <p>Simplification, traduction et explication des documents administratifs français — accessible à tous, quelle que soit votre langue d'origine.</p>
   </div>
-  <div class="header-langs">
-    <span class="lang-chip">FR</span>
-    <span class="lang-chip">AR</span>
-    <span class="lang-chip">EN</span>
-    <span class="lang-chip">ES</span>
-    <span class="lang-chip">PT</span>
-    <span class="lang-chip">TR</span>
-  </div>
-</header>
+ 
+  <!-- CONTENU PRINCIPAL -->
+  <main class="tabs-wrapper">
+    <p style="color:var(--muted);text-align:center;padding:40px 0;">Contenu à venir...</p>
+  </main>
+ 
+  <!-- FOOTER -->
+  <footer>
+    L'Assistant Inclusion · Propulsé par <a href="https://anthropic.com" target="_blank">Claude (Anthropic)</a> · Master Machine Learning · Sorbonne
+  </footer>
+ 
+</body>
+</html>
